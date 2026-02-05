@@ -121,7 +121,7 @@ const HomePage = () => {
   }}
 >
   <img
-    src="/logos/bstack-logo-global.png"
+    src="/logos/bstacklog.png"
     alt="BrowserStack Logo"
     style={{
       height: "32px",
