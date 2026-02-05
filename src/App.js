@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
+import HomePageAlternative from './components/HomePageAlternative';
 import Login from './components/Login';
 import GiftCards from './components/GiftCards';
 import LoadingPage from './components/LoadingPage';
@@ -30,6 +31,7 @@ function App() {
             <CartPreview />
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/alt-home" element={<HomePageAlternative />} />
               <Route path="/login" element={<Login />} />
               <Route path="/gift-cards" element={<GiftCards />} />
               <Route path="/cart" element={<Cart />} />

@@ -1,0 +1,88 @@
+.homepage-alt {
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.homepage-alt .hero-promo {
+    background: linear-gradient(135deg, #0d3b66 0%, #05668d 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: left;
+}
+
+.homepage-alt .hero-content {
+    max-width: 700px;
+    margin: 0;
+}
+
+.homepage-alt .hero-title {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #faf0ca;
+}
+
+.homepage-alt .hero-cta {
+    background: #f4d35e;
+    color: #0d3b66;
+    border-radius: 8px;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.homepage-alt .section-heading {
+    font-size: 2.5rem;
+    color: #0d3b66;
+    margin-top: 80px;
+    font-weight: 700;
+}
+
+.homepage-alt .gift-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.homepage-alt .gift-card-item {
+    border: 1px solid #d1d9e6;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.homepage-alt .card-button {
+    background: #05668d;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.homepage-alt .occasions-section {
+    background: #0d3b66;
+    color: white;
+}
+
+.homepage-alt .occasions-section .section-heading {
+    color: #faf0ca;
+}
+
+.homepage-alt .occasion-item {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.homepage-alt .occasion-icon {
+    color: #f4d35e;
+}
+
+.homepage-alt .brands-section {
+    background: white;
+}
+
+.homepage-alt .brand-icon {
+    border: 2px solid #eef2f7;
+    box-shadow: none;
+}
