@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import Login from './components/Login';
 import GiftCards from './components/GiftCards';
 import LoadingPage from './components/LoadingPage';
+import NotFound from './components/NotFound';
 
 
 import ProtectedRoute from './components/ProtectedRoute';
@@ -43,6 +44,8 @@ function App() {
                 }
               />
               <Route path="/loading" element={<LoadingPage />} />
+              <Route path="/404" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </CartProvider>

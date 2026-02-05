@@ -1,6 +1,6 @@
 # Known Bugs and Issues
 
-This document tracks known visual and functional defects within the Browserstack Cards application.
+This document tracks known visual and functional defects within the Browserstack Gift application.
 
 ## 1. Cross-Browser Rendering Issues
 - **Browsers**: Firefox

@@ -1,4 +1,4 @@
-# Browserstack Cards
+# Browserstack Gifts
 
 A modern React-based gift card marketplace featuring a comprehensive shopping experience with intentional browser-specific behaviors for testing and demonstration purposes.
 

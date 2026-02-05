@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import './GiftCards.css';
@@ -10,11 +10,20 @@ const GiftCards = () => {
   const { addToCart, getCartCount } = useCart();
   const { user, logout } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
 
 
 
   const handleAddToCart = (card) => {
-    addToCart(card);
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isFirefox = userAgent.includes('firefox');
+    const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+
+    if (isFirefox || isSafari) {
+      navigate('/404');
+    } else {
+      addToCart(card);
+    }
   };
 
   // Filter Logic
@@ -91,36 +100,36 @@ const GiftCards = () => {
         <div className="container">
           <Link to="/" className="logo">
             <div
-  className="logo"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-    padding: "8px 16px",
-    cursor: "pointer"
-  }}
->
-  <img
-    src="/logos/bstacklog.png"
-    alt="BrowserStack Logo"
-    style={{
-      height: "32px",
-      width: "auto",
-      objectFit: "contain"
-    }}
-  />
-  <h1
-    style={{
-      fontSize: "20px",
-      fontWeight: 600,
-      margin: 0,
-      color: "#172B4D",
-      letterSpacing: "0.3px"
-    }}
-  >
-    BrowserStack Gifts
-  </h1>
-</div>
+              className="logo"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                padding: "8px 16px",
+                cursor: "pointer"
+              }}
+            >
+              <img
+                src="/logos/bstacklog.png"
+                alt="BrowserStack Logo"
+                style={{
+                  height: "32px",
+                  width: "auto",
+                  objectFit: "contain"
+                }}
+              />
+              <h1
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 600,
+                  margin: 0,
+                  color: "#172B4D",
+                  letterSpacing: "0.3px"
+                }}
+              >
+                BrowserStack Gifts
+              </h1>
+            </div>
 
           </Link>
           <nav className="nav">
@@ -185,7 +194,7 @@ const GiftCards = () => {
                   className={`card-button ${addedItems[card.id] ? 'added' : ''}`}
                   onClick={() => handleAddToCart(card)}
                 >
-                  Shop Now
+                  Add to Cart
                 </button>
               </div>
             ))}

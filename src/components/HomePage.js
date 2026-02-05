@@ -13,7 +13,15 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const handleAddToCart = (card) => {
-    addToCart(card);
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isFirefox = userAgent.includes('firefox');
+    const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+
+    if (isFirefox || isSafari) {
+      navigate('/404');
+    } else {
+      addToCart(card);
+    }
   };
   const giftCards = [
     { id: 1, name: 'eBay Gift Card', price: '$10 - $500', image: '/logos/ebay.svg', badge: 'BEST SELLER' },
@@ -111,36 +119,36 @@ const HomePage = () => {
       <header className="header">
         <div className="container">
           <div
-  className="logo"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-    padding: "8px 16px",
-    cursor: "pointer"
-  }}
->
-  <img
-    src="/logos/bstacklog.png"
-    alt="BrowserStack Logo"
-    style={{
-      height: "32px",
-      width: "auto",
-      objectFit: "contain"
-    }}
-  />
-  <h1
-    style={{
-      fontSize: "20px",
-      fontWeight: 600,
-      margin: 0,
-      color: "#172B4D",
-      letterSpacing: "0.3px"
-    }}
-  >
-    BrowserStack Gifts
-  </h1>
-</div>
+            className="logo"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              padding: "8px 16px",
+              cursor: "pointer"
+            }}
+          >
+            <img
+              src="/logos/bstacklog.png"
+              alt="BrowserStack Logo"
+              style={{
+                height: "32px",
+                width: "auto",
+                objectFit: "contain"
+              }}
+            />
+            <h1
+              style={{
+                fontSize: "20px",
+                fontWeight: 600,
+                margin: 0,
+                color: "#172B4D",
+                letterSpacing: "0.3px"
+              }}
+            >
+              BrowserStack Gifts
+            </h1>
+          </div>
 
           <nav className="nav">
             <Link to="/gift-cards" className="nav-link">Gift Cards</Link>
@@ -201,7 +209,7 @@ const HomePage = () => {
                   className={`card-button ${addedItems[card.id] ? 'added' : ''}`}
                   onClick={() => handleAddToCart(card)}
                 >
-                  Shop Now
+                  Add to Cart
                 </button>
               </div>
             ))}
