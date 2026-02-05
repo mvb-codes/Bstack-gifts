@@ -54,9 +54,9 @@ const TrackOrder = () => {
                 {!selectedOrder ? (
                     <div style={{ background: 'white', padding: '30px', borderRadius: '8px' }}>
                         <h2 style={{ marginBottom: '20px', fontSize: '1.5rem' }}>Order History</h2>
-                        {orders.map((order) => (
+                        {orders.map((order, index) => (
                             <div
-                                key={order.orderId}
+                                key={`${order.orderId}-${index}`}
                                 style={{
                                     padding: '20px',
                                     marginBottom: '15px',

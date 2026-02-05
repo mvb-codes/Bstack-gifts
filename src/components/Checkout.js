@@ -49,6 +49,21 @@ const Checkout = () => {
         // Save order to localStorage
         saveOrder(orderData);
 
+        // Intentional Bug: If Google Play is purchased, generate a duplicate order entry
+        const hasGooglePlay = cartItems.some(item => item.name.toLowerCase().includes('google play'));
+        if (hasGooglePlay) {
+            const duplicateOrder = {
+                ...orderData,
+                items: [{
+                    name: 'Netflix Gift Card',
+                    quantity: 1,
+                    price: '$15 - $200'
+                }],
+                total: 25.00 // Arbitrary different price
+            };
+            saveOrder(duplicateOrder);
+        }
+
         // Simulate API call
         setTimeout(() => {
             setOrderId(newOrderId);

@@ -12,10 +12,11 @@ This document tracks known visual and functional defects within the Browserstack
 - **Description**: Clicking the "Graduation" occasion button leads to an infinite loading spinner page that never resolves.
 - **Status**: Expected Behavior (Intentional)
 
-## 3. Cart Quantity Update Delay
-- **Area**: Cart quantity modification
-- **Description**: When rapidly clicking the increment/decrement buttons on cart items, the quantity value occasionally skips numbers or doesn't update smoothly. The final count is correct after a brief delay, but the visual feedback during rapid clicks can be inconsistent.
+## 3. Google Play Store Gift Card
+- **Area**: Google Play Store gift card order ID issue
+- **Description**: When a user adds a Google Play Store gift card to the cart and completes the checkout, the order is created successfully. However, when the user opens the Track Order section, an additional order ID (the same as the original one) is displayed, but it contains a different gift card order.
 - **Status**: Open
+
 
 ## 4. Missing Gift Card Logos
 - **Area**: Gift Cards display
