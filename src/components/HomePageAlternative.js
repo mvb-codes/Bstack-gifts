@@ -1,15 +1,13 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
-import { FaCakeCandles, FaHandHoldingHeart, FaHeart, FaUserGraduate, FaRing, FaHouse } from 'react-icons/fa6';
+import { FaCakeCandles, FaHandHoldingHeart, FaHeart, FaUserGraduate } from 'react-icons/fa6';
 import './HomePageAlternative.css';
 
 const HomePageAlternative = () => {
     const { addToCart, getCartCount } = useCart();
     const { user, logout } = useAuth();
-    const [addedItems] = React.useState({});
-    const navigate = useNavigate();
 
     const handleAddToCart = (card) => {
         addToCart(card);
