@@ -8,7 +8,7 @@ import './HomePage.css';
 const HomePage = () => {
   const { addToCart, getCartCount } = useCart();
   const { user, logout } = useAuth();
-  const [addedItems, setAddedItems] = React.useState({});
+  const [addedItems] = React.useState({});
   const [useSignIn, setUseSignIn] = React.useState(false);
   const navigate = useNavigate();
 
@@ -84,11 +84,11 @@ const HomePage = () => {
           <div className="top-nav-links">
             <Link to="/track-order" className="top-nav-link">TRACK ORDER</Link>
             <span className="separator">|</span>
-            <a href="#" className="top-nav-link">ACTIVATE</a>
+            <button className="top-nav-button">ACTIVATE</button>
             <span className="separator">|</span>
-            <a href="#" className="top-nav-link">CHECK BALANCE</a>
+            <button className="top-nav-button">CHECK BALANCE</button>
             <span className="separator">|</span>
-            <a href="#" className="top-nav-link">SUPPORT</a>
+            <button className="top-nav-button">SUPPORT</button>
           </div>
           <div className="top-nav-right">
             <label className="toggle-switch">
@@ -102,7 +102,7 @@ const HomePage = () => {
               <span className="toggle-label">Use "Sign In"</span>
             </label>
             <span className="separator" style={{ margin: '0 10px' }}>|</span>
-            <a href="#" className="top-nav-link">Gift card for business</a>
+            <button className="top-nav-button">Gift card for business</button>
           </div>
         </div>
       </div>
@@ -220,27 +220,27 @@ const HomePage = () => {
             <div className="footer-section">
               <h4>About</h4>
               <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Customer Reviews</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><button className="footer-link">HOME</button></li>
+                <li><button className="footer-link">About Us</button></li>
+                <li><button className="footer-link">Customer Reviews</button></li>
+                <li><button className="footer-link">Blog</button></li>
               </ul>
             </div>
             <div className="footer-section">
               <h4>Support</h4>
               <ul>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Check Balance</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><button className="footer-link">FAQs</button></li>
+                <li><button className="footer-link">Check Balance</button></li>
+                <li><button className="footer-link">Order Status</button></li>
+                <li><button className="footer-link">Contact Us</button></li>
               </ul>
             </div>
             <div className="footer-section">
               <h4>Legal</h4>
               <ul>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Cookie Policy</a></li>
+                <li><button className="footer-link">Terms of Use</button></li>
+                <li><button className="footer-link">Privacy Policy</button></li>
+                <li><button className="footer-link">Cookie Policy</button></li>
               </ul>
             </div>
           </div>

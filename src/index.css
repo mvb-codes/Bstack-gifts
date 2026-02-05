@@ -18,3 +18,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Link-like Buttons */
+.top-nav-button,
+.footer-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.top-nav-button {
+  color: #666;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.top-nav-button:hover {
+  color: #333;
+}
+
+.footer-link {
+  color: #666;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.footer-link:hover {
+  color: #007bff;
+}
