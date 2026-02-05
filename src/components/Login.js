@@ -31,7 +31,7 @@ const Login = () => {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <h1>Browserstack Cards</h1>
+            <h1>Browserstack Gifts</h1>
           </div>
         </div>
       </header>

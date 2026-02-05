@@ -110,9 +110,38 @@ const HomePage = () => {
       {/* Main Header */}
       <header className="header">
         <div className="container">
-          <div className="logo">
-            <h1>Browserstack Cards</h1>
-          </div>
+          <div
+  className="logo"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    padding: "8px 16px",
+    cursor: "pointer"
+  }}
+>
+  <img
+    src="/logos/bstack-logo-global.png"
+    alt="BrowserStack Logo"
+    style={{
+      height: "32px",
+      width: "auto",
+      objectFit: "contain"
+    }}
+  />
+  <h1
+    style={{
+      fontSize: "20px",
+      fontWeight: 600,
+      margin: 0,
+      color: "#172B4D",
+      letterSpacing: "0.3px"
+    }}
+  >
+    BrowserStack Gifts
+  </h1>
+</div>
+
           <nav className="nav">
             <Link to="/gift-cards" className="nav-link">Gift Cards</Link>
             {user ? (
@@ -245,7 +274,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2026 Browserstack Cards. All rights reserved.</p>
+            <p>&copy; 2026 Browserstack Gifts. All rights reserved.</p>
           </div>
         </div>
       </footer>

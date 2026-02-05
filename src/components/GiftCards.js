@@ -90,7 +90,7 @@ const GiftCards = () => {
       <header className="header">
         <div className="container">
           <Link to="/" className="logo">
-            <h1>Browserstack Cards</h1>
+            <img src="/logos/browserstack.svg" alt="BrowserStack Logo" style={{ height: '32px' }} />
           </Link>
           <nav className="nav">
             <Link to="/gift-cards" className="nav-link active">Gift Cards</Link>
@@ -200,7 +200,7 @@ const GiftCards = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2026 Browserstack Cards. All rights reserved.</p>
+            <p>&copy; 2026 Browserstack Gifts. All rights reserved.</p>
           </div>
         </div>
       </footer>
