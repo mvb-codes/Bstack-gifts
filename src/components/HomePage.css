@@ -1,0 +1,224 @@
+.homepage {
+  width: 100%;
+}
+
+/* Inherit header/nav/footer styles from global or duplicated if needed 
+   For this demo, we assume App.css or similar handles global resets
+*/
+
+.hero-promo {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: #ffc107;
+  color: #333;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  background: #ffca2c;
+}
+
+.section-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333333;
+  margin-top: 60px;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 40px 0;
+}
+
+/* Reusing grid styles for simplicity, but explicit here for safety */
+.gift-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* Occasions */
+.occasions-section {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+
+.occasions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.occasion-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.occasion-item:hover {
+  transform: translateY(-5px);
+}
+
+.occasion-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.occasion-icon svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.occasion-name {
+  font-weight: 600;
+  color: #666666;
+}
+
+/* Brands */
+.brands-section {
+  padding: 60px 0;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.brand-item {
+  text-align: center;
+}
+
+.brand-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.brand-icon:hover {
+  transform: scale(1.05);
+}
+
+.brand-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.brand-icon-fallback {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #999;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Added State */
+.card-button.added {
+  background-color: #28a745 !important;
+  cursor: default;
+}
+
+/* Toggle Switch Styles */
+.top-nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background-color: #e0e0e0;
+  border-radius: 22px;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  border: 1px solid #d0d0d0;
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-input:checked+.toggle-slider {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.toggle-input:checked+.toggle-slider::before {
+  transform: translateX(18px);
+}
