@@ -30,8 +30,8 @@ function App() {
           <div className="App">
             <CartPreview />
             <Routes>
-              <Route path="/alt-home" element={<HomePage />} />
-              <Route path="/" element={<HomePageAlternative />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/alt-home" element={<HomePageAlternative />} />
               <Route path="/login" element={<Login />} />
               <Route path="/gift-cards" element={<GiftCards />} />
               <Route path="/cart" element={<Cart />} />
