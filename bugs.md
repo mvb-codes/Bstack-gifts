@@ -23,8 +23,8 @@ This document tracks known visual and functional defects within the Browserstack
 - **Description**: Certain gift card logos are not displaying in the gift cards section, showing fallback text instead of the brand logos.
 - **Status**: Open
 
-## 5. Shop Now Button - Mobile Viewport Issue
-- **Area**: Gift Cards - Shop Now functionality
-- **Description**: The "Shop Now" button becomes non-clickable or disappears entirely on specific mobile viewport widths. This issue only occurs when rendered on mobile viewports; desktop rendering works fine.
+## 5. Shop Now Button – Mobile Viewport Issue
+- **Area**: Gift Cards – Shop Now functionality
+- **Description**: The “Shop Now” button becomes non-clickable or disappears entirely on specific mobile viewport sizes, such as 360 × 780 px and iPhone 14 Pro (screen size: 6.1 in; resolution: 1179 × 2556 px; viewport: 390 × 664 px). This issue occurs only when the page is rendered on mobile viewports; the desktop view renders correctly.
 - **Status**: Open
 

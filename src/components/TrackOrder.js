@@ -27,6 +27,17 @@ const TrackOrder = () => {
         });
     };
 
+    const parsePrice = (priceInput) => {
+        if (typeof priceInput === 'number') return priceInput;
+        if (typeof priceInput === 'string') {
+            const matches = priceInput.match(/\$(\d+(\.\d+)?)/);
+            if (matches && matches[1]) {
+                return parseFloat(matches[1]);
+            }
+        }
+        return 0;
+    };
+
     if (!user) {
         return (
             <div className="container" style={{ padding: '50px 0', textAlign: 'center' }}>
@@ -133,7 +144,7 @@ const TrackOrder = () => {
                                     </p>
                                 </div>
                                 <p style={{ margin: '0', fontWeight: 'bold' }}>
-                                    ${(item.price * item.quantity).toFixed(2)}
+                                    ${(parsePrice(item.price) * item.quantity).toFixed(2)}
                                 </p>
                             </div>
                         ))}
