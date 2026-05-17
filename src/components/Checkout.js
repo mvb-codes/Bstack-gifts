@@ -45,7 +45,9 @@ const Checkout = () => {
             })),
             total: getCartTotal()
         };
+        //Todo: Add validation for form data before proceeding with order creation
 
+    
         // Save order to localStorage
         saveOrder(orderData);
 
@@ -80,7 +82,6 @@ const Checkout = () => {
             </div>
         );
     }
-
     if (orderPlaced) {
         return (
             <div className="container" style={{ padding: '50px 0', textAlign: 'center' }}>
