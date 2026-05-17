@@ -46,7 +46,6 @@ const Checkout = () => {
             total: getCartTotal()
         };
 
-        //todo: this is wrong, we should validate the form data before creating the order, otherwise we might end up with invalid orders in our system. We can add a simple validation function that checks if all required fields are filled and if the email is in a valid format. If the validation fails, we can show an error message to the user and prevent the order from being created.
         //fixme: we should also consider adding more robust validation for the payment information, such as checking if the card number is valid using the Luhn algorithm, and ensuring that the expiry date is in the future. This will help prevent issues with processing payments and ensure a smoother checkout experience for our users.
         //Todo: Add validation for form data before proceeding with order creation
 //fixme hi bro
