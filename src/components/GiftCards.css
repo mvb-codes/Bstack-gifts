@@ -246,7 +246,6 @@
   grid-column: 1 / -1;
 }
 
-/* Intentional Bug: Add to Cart button broken on specific mobile viewports (360px and 390px) */
 @media (width: 360px),
 (width: 390px) {
   .gift-card-item .card-button {
